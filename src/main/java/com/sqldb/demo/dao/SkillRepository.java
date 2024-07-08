@@ -7,6 +7,6 @@ import org.springframework.data.jpa.repository.Query;
 import java.util.List;
 
 public interface SkillRepository extends JpaRepository<Skills, Long>{
-    @Query("SELECT * FROM Skills")
-    List<Skills> getContainingQuote(String word);
+    @Query("SELECT s FROM Skills s")
+    List<Skills> findAllSKills();
 }

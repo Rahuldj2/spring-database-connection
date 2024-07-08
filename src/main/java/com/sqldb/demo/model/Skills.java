@@ -5,9 +5,6 @@ import jakarta.persistence.*;
 @Entity
 @Table(name = "skills")
 public class Skills {
-    public Long getId() {
-        return id;
-    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -15,5 +12,21 @@ public class Skills {
     private Long id;
 
     @Column(name = "skill_name")
-    private String skill_name;
+    private String skillName;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getSkillName() {
+        return skillName;
+    }
+
+    public void setSkillName(String skillName) {
+        this.skillName = skillName;
+    }
 }
