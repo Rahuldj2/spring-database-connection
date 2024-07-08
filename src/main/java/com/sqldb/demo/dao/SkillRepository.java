@@ -9,4 +9,7 @@ import java.util.List;
 public interface SkillRepository extends JpaRepository<Skills, Long>{
     @Query("SELECT s FROM Skills s")
     List<Skills> findAllSKills();
+
+    @Override
+    Skills save(Skills entity);
 }

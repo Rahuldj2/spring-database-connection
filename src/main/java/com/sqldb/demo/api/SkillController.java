@@ -3,6 +3,7 @@ package com.sqldb.demo.api;
 import com.sqldb.demo.model.Skills;
 import com.sqldb.demo.service.SkillService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,6 +19,13 @@ public class SkillController {
     @GetMapping
     public List<Skills> getAllSkills() {
         return skillService.getAllSkills();
+    }
+
+    @PostMapping("/insert")
+    public ResponseEntity<Skills> insertSkill(@RequestBody Skills skillName) {
+//        log.info("Received skill object: {}", skill);
+        Skills insertedSkill = skillService.insertSkill(skillName.getSkillName());
+        return new ResponseEntity<>(insertedSkill, HttpStatus.CREATED);
     }
 
 //    @GetMapping("/{id}")

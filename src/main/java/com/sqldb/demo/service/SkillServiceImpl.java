@@ -18,4 +18,13 @@ public class SkillServiceImpl implements SkillService {
         return skillRepository.findAll();
     }
 
+    @Override
+    public Skills insertSkill(String skillName) {
+        Skills skill = new Skills();
+        skill.setSkillName(skillName);
+        return skillRepository.save(skill);
+    }
+
+
+
 }

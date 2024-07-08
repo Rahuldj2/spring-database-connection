@@ -1,5 +1,6 @@
 package com.sqldb.demo.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 
 @Entity
@@ -26,7 +27,7 @@ public class Skills {
         return skillName;
     }
 
-    public void setSkillName(String skillName) {
+    public void setSkillName(@JsonProperty("skillName") String skillName) {
         this.skillName = skillName;
     }
 }

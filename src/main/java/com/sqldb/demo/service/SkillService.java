@@ -5,6 +5,7 @@ import java.util.List;
 
 public interface SkillService {
     List<Skills> getAllSkills();
+    Skills insertSkill(String skillName);
 //    Skills getSkillById(Long id);
 //    Skills saveSkill(Skills skill);
 //    void deleteSkill(Long id);
