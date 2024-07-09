@@ -8,7 +8,7 @@ RUN mkdir /opt/app
 COPY target/demo-0.0.1-SNAPSHOT.jar /opt/app/
 
 # Specify the /tmp directory as a volume
-VOLUME /tmp
+#VOLUME /tmp
 
 # Expose the port on which the Spring Boot application runs
 EXPOSE 8080
