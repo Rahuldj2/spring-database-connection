@@ -1,0 +1,9 @@
+com\sqldb\demo\api\SkillController.class
+com\sqldb\demo\model\Skills.class
+com\sqldb\demo\api\CourseController.class
+com\sqldb\demo\model\Course.class
+com\sqldb\demo\dao\SkillRepository.class
+com\sqldb\demo\dao\CourseRepository.class
+com\sqldb\demo\service\SkillService.class
+com\sqldb\demo\service\SkillServiceImpl.class
+com\sqldb\demo\service\CourseService.class
